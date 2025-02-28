@@ -1,0 +1,121 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  backgroundImage?: string;
+}
+
+const { 
+  title, 
+  description, 
+  backgroundImage = '/hero-bg-futuristic.jpg' 
+} = Astro.props;
+---
+
+<section class="hero">
+  <div class="hero-background"></div>
+  <div class="container">
+    <div class="hero-content">
+      <h1 class="glitch" data-text={title}>{title}</h1>
+      <p class="animated-text">{description}</p>
+      <div class="cta-wrapper">
+        <a href="/products" class="btn btn-futuristic">Explore Innovations</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-particles"></div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-primary);
+    opacity: 0.8;
+    z-index: -2;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .hero p {
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+    color: var(--secondary-color);
+  }
+
+  .hero-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+      radial-gradient(circle at 20% 80%, rgba(100,255,218,0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(0,180,219,0.1) 0%, transparent 50%);
+    z-index: 1;
+    animation: particle-move 10s infinite alternate;
+  }
+
+  @keyframes particle-move {
+    0% { transform: translateY(0) rotate(0deg); }
+    100% { transform: translateY(-50px) rotate(360deg); }
+  }
+
+  .cta-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn-futuristic {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-futuristic::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      45deg, 
+      transparent, 
+      var(--secondary-color), 
+      transparent
+    );
+    transform: rotate(-45deg);
+    animation: shine 3s infinite linear;
+  }
+
+  @keyframes shine {
+    0% { transform: rotate(-45deg) translateX(-100%); }
+    100% { transform: rotate(-45deg) translateX(100%); }
+  }
+</style>

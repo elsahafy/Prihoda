@@ -1,0 +1,89 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import '../styles/global.css';
+---
+
+<Layout title="AeroFabric Solutions - Textile Air Distribution">
+  <Header />
+  <Hero 
+    title="Revolutionizing Air Distribution" 
+    description="Advanced textile engineering solutions for precise, efficient, and sustainable air management across industries."
+    backgroundImage="/hero-background.jpg"
+  />
+  
+  <main class="container">
+    <section class="features">
+      <div class="feature">
+        <div class="icon">🔬</div>
+        <h2>Advanced Engineering</h2>
+        <p>Cutting-edge textile technologies that redefine air distribution efficiency.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">🌍</div>
+        <h2>Sustainable Design</h2>
+        <p>Eco-friendly solutions that minimize environmental impact and energy consumption.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">🏆</div>
+        <h2>Custom Solutions</h2>
+        <p>Tailored air management systems for unique industrial and commercial needs.</p>
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2>Ready to Optimize Your Air Distribution?</h2>
+      <p>Discover how our innovative textile solutions can transform your environment.</p>
+      <a href="/contact" class="btn">Schedule Consultation</a>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 50px 0;
+    text-align: center;
+  }
+
+  .feature {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .feature:hover {
+    transform: translateY(-10px);
+  }
+
+  .feature .icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+
+  .feature h2 {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+  }
+
+  .cta {
+    background-color: var(--background-color);
+    text-align: center;
+    padding: 50px;
+    border-radius: 10px;
+  }
+
+  .cta h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+  }
+
+  .cta p {
+    margin-bottom: 30px;
+  }
+</style>

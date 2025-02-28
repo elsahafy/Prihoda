@@ -1,0 +1,229 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import '../styles/global.css';
+---
+
+<Layout title="AeroFabric Solutions - Advanced Air Distribution Engineering">
+  <Header />
+  
+  <Hero 
+    title="Engineering Air Innovation" 
+    description="Transforming environmental control through advanced textile engineering and precision design"
+  />
+
+  <main class="container solutions-page">
+    <section class="solutions-grid">
+      <div class="solution-card glitch-hover">
+        <div class="solution-icon">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="customDesignGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#64ffda;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#00b4db;stop-opacity:1" />
+              </linearGradient>
+            </defs>
+            <path 
+              d="M50 10 L90 50 L50 90 L10 50 Z" 
+              fill="url(#customDesignGradient)" 
+              stroke="#64ffda" 
+              stroke-width="2"
+            />
+            <circle cx="50" cy="50" r="35" fill="transparent" stroke="#64ffda" stroke-width="2" />
+          </svg>
+        </div>
+        <h2 class="glitch" data-text="Custom Industrial Design">Custom Industrial Design</h2>
+        <p>Engineered solutions that adapt to complex air circulation requirements with unparalleled precision</p>
+        <div class="solution-details">
+          <div class="detail">
+            <span class="detail-label">Complexity</span>
+            <div class="detail-meter" style="width: 90%"></div>
+          </div>
+          <div class="detail">
+            <span class="detail-label">Customization</span>
+            <div class="detail-meter" style="width: 95%"></div>
+          </div>
+        </div>
+        <a href="#" class="btn btn-futuristic">Design Consultation</a>
+      </div>
+
+      <div class="solution-card glitch-hover">
+        <div class="solution-icon">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="temperatureGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#00b4db;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#64ffda;stop-opacity:1" />
+              </linearGradient>
+            </defs>
+            <rect 
+              x="25" y="25" 
+              width="50" height="50" 
+              fill="url(#temperatureGradient)" 
+              stroke="#64ffda" 
+              stroke-width="2"
+            />
+            <circle cx="50" cy="50" r="40" fill="transparent" stroke="#64ffda" stroke-width="2" />
+          </svg>
+        </div>
+        <h2 class="glitch" data-text="Temperature Optimization">Temperature Optimization</h2>
+        <p>Advanced textile systems ensuring consistent and efficient temperature management across diverse environments</p>
+        <div class="solution-details">
+          <div class="detail">
+            <span class="detail-label">Efficiency</span>
+            <div class="detail-meter" style="width: 85%"></div>
+          </div>
+          <div class="detail">
+            <span class="detail-label">Precision</span>
+            <div class="detail-meter" style="width: 80%"></div>
+          </div>
+        </div>
+        <a href="#" class="btn btn-futuristic">Explore Thermal Solutions</a>
+      </div>
+
+      <div class="solution-card glitch-hover">
+        <div class="solution-icon">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="sustainabilityGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#64ffda;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#00b4db;stop-opacity:1" />
+              </linearGradient>
+            </defs>
+            <path 
+              d="M50 10 L80 50 L50 90 L20 50 Z" 
+              fill="url(#sustainabilityGradient)" 
+              stroke="#64ffda" 
+              stroke-width="2"
+            />
+            <circle cx="50" cy="50" r="30" fill="transparent" stroke="#64ffda" stroke-width="2" />
+          </svg>
+        </div>
+        <h2 class="glitch" data-text="Sustainable Engineering">Sustainable Engineering</h2>
+        <p>Eco-friendly designs that reduce energy consumption and minimize environmental impact through innovative textile technologies</p>
+        <div class="solution-details">
+          <div class="detail">
+            <span class="detail-label">Energy Reduction</span>
+            <div class="detail-meter" style="width: 95%"></div>
+          </div>
+          <div class="detail">
+            <span class="detail-label">Environmental Impact</span>
+            <div class="detail-meter" style="width: 90%"></div>
+          </div>
+        </div>
+        <a href="#" class="btn btn-futuristic">Green Technology</a>
+      </div>
+    </section>
+
+    <section class="consultation-cta">
+      <div class="cta-content">
+        <h2 class="glitch" data-text="Custom Engineering Solutions">Custom Engineering Solutions</h2>
+        <p>Transform your air distribution challenges with our cutting-edge textile engineering expertise</p>
+        <a href="/contact" class="btn btn-futuristic">Request Consultation</a>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .solutions-page {
+    padding: 100px 0;
+    background: linear-gradient(
+      135deg, 
+      var(--background-dark) 0%, 
+      color-mix(in srgb, var(--background-dark) 90%, var(--secondary-color)) 100%
+    );
+  }
+
+  .solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+
+  .solution-card {
+    background: rgba(15, 25, 45, 0.7);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .solution-card:hover {
+    border-color: var(--secondary-color);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(100, 255, 218, 0.2);
+  }
+
+  .solution-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+  }
+
+  .solution-card h2 {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+  }
+
+  .solution-details {
+    margin: 20px 0;
+  }
+
+  .detail {
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  .detail-label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-light);
+    font-size: 0.9rem;
+  }
+
+  .detail-meter {
+    height: 5px;
+    background: var(--gradient-accent);
+    border-radius: 3px;
+  }
+
+  .consultation-cta {
+    background: rgba(15, 25, 45, 0.5);
+    border-radius: 15px;
+    padding: 50px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+  }
+
+  .consultation-cta h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+
+  .consultation-cta p {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    color: var(--text-light);
+  }
+
+  .glitch-hover {
+    transition: all 0.3s ease;
+  }
+
+  .glitch-hover:hover {
+    animation: glitch-hover 0.5s infinite;
+  }
+
+  @keyframes glitch-hover {
+    0%, 100% { transform: translateY(-10px); }
+    50% { transform: translateY(-5px) rotate(1deg); }
+  }
+</style>

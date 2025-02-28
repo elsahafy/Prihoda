@@ -1,0 +1,216 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import '../styles/global.css';
+---
+
+<Layout title="AeroFabric Solutions - Comprehensive Air Distribution Products">
+  <Header />
+  
+  <Hero 
+    title="Advanced Textile Air Solutions" 
+    description="Cutting-edge engineering for precise, efficient air circulation across industries"
+  />
+
+  <main class="container products-page">
+    <section class="product-categories">
+      <div class="product-category air-socks">
+        <h2 class="category-title glitch" data-text="Air Socks">Air Socks</h2>
+        <div class="category-content">
+          <div class="category-description">
+            <p>Revolutionary textile-based air distribution systems designed for optimal air flow and environmental control. Our Air Socks represent the pinnacle of intelligent air management, combining advanced materials with precision engineering.</p>
+          </div>
+          <div class="product-specs">
+            <div class="spec-grid">
+              <div class="spec-item">
+                <h3>Material Innovation</h3>
+                <ul>
+                  <li>Proprietary micro-perforated textile</li>
+                  <li>Antimicrobial fabric treatment</li>
+                  <li>UV and flame-resistant composition</li>
+                </ul>
+              </div>
+              <div class="spec-item">
+                <h3>Performance Metrics</h3>
+                <ul>
+                  <li>Air Distribution Efficiency: 95%</li>
+                  <li>Temperature Uniformity: ±1.5°C</li>
+                  <li>Pressure Drop: Minimal (0.2 Pa/m)</li>
+                </ul>
+              </div>
+              <div class="spec-item">
+                <h3>Customization Options</h3>
+                <ul>
+                  <li>Custom lengths (1-50 meters)</li>
+                  <li>Multiple perforation patterns</li>
+                  <li>Color and branding options</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-category air-distribution">
+        <h2 class="category-title glitch" data-text="Air Distribution Systems">Air Distribution Systems</h2>
+        <div class="category-content">
+          <div class="category-description">
+            <p>Intelligent air distribution solutions that transform how environments manage airflow. Our systems provide unparalleled control, ensuring optimal comfort, energy efficiency, and air quality across diverse applications.</p>
+          </div>
+          <div class="product-specs">
+            <div class="spec-grid">
+              <div class="spec-item">
+                <h3>System Architecture</h3>
+                <ul>
+                  <li>Modular design</li>
+                  <li>Smart sensor integration</li>
+                  <li>IoT-enabled monitoring</li>
+                </ul>
+              </div>
+              <div class="spec-item">
+                <h3>Energy Efficiency</h3>
+                <ul>
+                  <li>Up to 40% energy savings</li>
+                  <li>Dynamic airflow adjustment</li>
+                  <li>Real-time performance optimization</li>
+                </ul>
+              </div>
+              <div class="spec-item">
+                <h3>Application Versatility</h3>
+                <ul>
+                  <li>Industrial facilities</li>
+                  <li>Healthcare environments</li>
+                  <li>Commercial spaces</li>
+                  <li>Data centers</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-category innovations">
+        <h2 class="category-title glitch" data-text="Innovations & Specialties">Innovations & Specialties</h2>
+        <div class="category-content">
+          <div class="category-description">
+            <p>At the forefront of textile air distribution technology, our R&D team continuously pushes boundaries. We develop groundbreaking solutions that redefine air management, focusing on sustainability, precision, and intelligent design.</p>
+          </div>
+          <div class="product-specs">
+            <div class="spec-grid">
+              <div class="spec-item">
+                <h3>Technological Breakthroughs</h3>
+                <ul>
+                  <li>Nano-engineered textile membranes</li>
+                  <li>Self-cleaning air distribution fabric</li>
+                  <li>Adaptive thermal regulation</li>
+                </ul>
+              </div>
+              <div class="spec-item">
+                <h3>Sustainability Focus</h3>
+                <ul>
+                  <li>100% recyclable materials</li>
+                  <li>Carbon-neutral manufacturing</li>
+                  <li>Reduced environmental footprint</li>
+                </ul>
+              </div>
+              <div class="spec-item">
+                <h3>Future Research Areas</h3>
+                <ul>
+                  <li>Quantum air flow modeling</li>
+                  <li>Bio-mimetic textile design</li>
+                  <li>AI-driven air distribution</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .products-page {
+    padding: 100px 0;
+    background: linear-gradient(
+      135deg, 
+      var(--background-dark) 0%, 
+      color-mix(in srgb, var(--background-dark) 90%, var(--secondary-color)) 100%
+    );
+  }
+
+  .product-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .product-category {
+    background: rgba(15, 25, 45, 0.7);
+    border-radius: 15px;
+    padding: 40px;
+    backdrop-filter: blur(10px);
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+  }
+
+  .product-category:hover {
+    border-color: var(--secondary-color);
+    box-shadow: 0 10px 30px rgba(100, 255, 218, 0.2);
+  }
+
+  .category-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+  }
+
+  .category-description {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--text-light);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .spec-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  .spec-item {
+    background: rgba(10, 25, 47, 0.8);
+    padding: 25px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  .spec-item:hover {
+    transform: translateY(-10px);
+  }
+
+  .spec-item h3 {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .spec-item ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .spec-item ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+    text-align: center;
+  }
+
+  .spec-item ul li:last-child {
+    border-bottom: none;
+  }
+</style>

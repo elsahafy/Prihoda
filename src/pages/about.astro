@@ -1,0 +1,117 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import '../styles/global.css';
+---
+
+<Layout title="AeroFabric Solutions - About Us">
+  <Header />
+  
+  <main class="container about-page">
+    <section class="company-intro">
+      <h1>Innovating Air Distribution Technology</h1>
+      <p>AeroFabric Solutions is a pioneering engineering firm dedicated to revolutionizing air distribution through advanced textile technologies.</p>
+    </section>
+
+    <section class="mission-vision">
+      <div class="mission">
+        <h2>Our Mission</h2>
+        <p>To provide cutting-edge, sustainable air distribution solutions that enhance comfort, efficiency, and environmental responsibility across diverse industries.</p>
+      </div>
+      <div class="vision">
+        <h2>Our Vision</h2>
+        <p>To be the global leader in textile-based air management, continuously pushing the boundaries of engineering innovation and environmental sustainability.</p>
+      </div>
+    </section>
+
+    <section class="team-highlights">
+      <h2>Our Engineering Team</h2>
+      <div class="team-grid">
+        <div class="team-member">
+          <img src="/engineer-1.jpg" alt="Lead Engineer" />
+          <h3>Dr. Elena Rodriguez</h3>
+          <p>Chief Technology Officer</p>
+        </div>
+        <div class="team-member">
+          <img src="/engineer-2.jpg" alt="Design Engineer" />
+          <h3>Michael Chen</h3>
+          <p>Senior Design Engineer</p>
+        </div>
+        <div class="team-member">
+          <img src="/engineer-3.jpg" alt="Research Specialist" />
+          <h3>Sarah Thompson</h3>
+          <p>Research & Development Lead</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .about-page {
+    padding: 50px 0;
+  }
+
+  .company-intro {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .company-intro h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+  }
+
+  .mission-vision {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+
+  .mission, .vision {
+    flex: 1;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  .mission h2, .vision h2 {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+  }
+
+  .team-highlights h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+  }
+
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  .team-member {
+    text-align: center;
+    background: var(--white);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  .team-member img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+
+  .team-member h3 {
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+  }
+</style>
